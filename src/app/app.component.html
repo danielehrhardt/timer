@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <video
+    src="assets/video.mp4"
+    autoplay
+    loop
+  ></video>
+  <div class="timer-wrapper">
+    <div class="date">{{ rxTime | date: 'dd.MM.YYYY' }}</div>
+    <div class="timer">
+      {{ rxTime | date: 'hh:mm:ss' }}
+    </div>
+    <div class="text">UTC +2 (Deutschland)</div>
+  </div>
+</div>
