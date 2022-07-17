@@ -8,7 +8,7 @@ import { map, share, Subscription, timer } from 'rxjs';
 })
 export class AppComponent {
   rxTime = new Date();
-  subscription: Subscription;
+  subscription: Subscription | undefined;
 
   ngOnInit() {
     // Using RxJS Timer
@@ -23,7 +23,7 @@ export class AppComponent {
   }
 
   ngAfterViewInit() {
-    document.querySelector('video').playbackRate = 1;
+    (document as any).querySelector('video').playbackRate = 1;
   }
 
   ngOnDestroy() {
